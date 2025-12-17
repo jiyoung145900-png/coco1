@@ -22,14 +22,22 @@
         }
         
         /* Logo Code for Upper Right Diagonal Placement */
-        .fixed-logo-container {
-            position: fixed;
-            top: 40px;
-            right: 340px;
-            z-index: 95;
-            pointer-events: none;
-        }
+        /* 수정 후 (이 코드로 덮어쓰기 하세요) */
+.fixed-logo-container {
+    position: fixed;
+    top: 40px;      /* 위에서부터의 거리 */
+    right: 340px;   /* 오른쪽에서부터의 거리 */
+    z-index: 95;
+    pointer-events: none;
+}
 
+/* 로고 이미지 크기를 직접 조절하는 핵심 코드 */
+.fixed-logo-container img {
+    width: 250px !important;  /* 👈 이 숫자를 300, 400 등으로 키우면 로고가 커집니다! */
+    height: auto;
+    opacity: 0.1;             /* 로고 투명도 (0.1~1.0 사이로 조절 가능) */
+}
+        
         .wrap {
             flex-grow: 1;
             /* left-menu (180px) + margin (20px) = 200px */
